@@ -1,0 +1,25 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.main {
+  h1 {
+    font-weight: normal;
+    font-size: 55px;
+  }
+
+  .prof-image {
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    background: image-url('me.png') no-repeat;
+    margin-left: 60px;
+  }
+
+  .about {
+    font-size: 17px;
+    @media (min-width: 768px) {
+      padding: 40px;
+      margin-top: -10px;
+    }
+  }
+}
