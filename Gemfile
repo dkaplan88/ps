@@ -14,5 +14,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
-gem 'rails_12factor', group: :production
+gem 'factory_girl_rails'
+
+group :development, :test do
+  gem 'spring'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', require: false
+end
+
