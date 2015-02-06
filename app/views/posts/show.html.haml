@@ -1,0 +1,11 @@
+.posts
+  .row
+    .col-sm-4
+      = link_to 'See All Posts', blog_url
+  .row
+    .col-sm-4
+      %h3
+        = @post.title
+  .row
+    .col-sm-12
+      %p= @post.content.html_safe

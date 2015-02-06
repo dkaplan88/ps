@@ -1,29 +1,25 @@
 .main
-  .container
-    .row
-      .col-sm-4.col-sm-offset-4
-        %h1
-          Dan Kaplan
-        .prof-image
-    .row
-      .col-sm-6.col-sm-offset-3
-        .about
-          %p
-            I am a Senior Software Engineer with
-            = link_to 'Enova', 'https://www.enova.com/', target: '_blank'
-            living in Chicago.
+  .row
+    .col-sm-6.col-sm-offset-3
+      .about
+        %p
+          I am a Senior Software Engineer with
+          = link_to 'Enova', 'https://www.enova.com/', target: '_blank'
+          living in Chicago.
 
-          %p
-            I am a full stack developer with extensive experience in Ruby on Rails, Javascript, Ember, Bootstrap, Postgresql, and of course HTML and CSS.
+        %p
+          I am a full stack developer with extensive experience in Ruby on Rails, Javascript, Ember, Bootstrap, Postgresql, and of course HTML and CSS.
 
-          %p 
-            Here is my
-            = link_to 'Github', 'https://github.com/dkaplan88', target: '_blank'
-            , Resume,
-            = link_to 'LinkedIn', 'https://www.linkedin.com/in/dkaplan88', target: '_blank'
-            ,
-            = link_to 'Twitter', 'https://twitter.com/_dankaplan/', target: '_blank'
-            , and check out my blog.
+        %p 
+          Here is my
+          = link_to 'Github', 'https://github.com/dkaplan88', target: '_blank'
+          , Resume,
+          = link_to 'LinkedIn', 'https://www.linkedin.com/in/dkaplan88', target: '_blank'
+          ,
+          = link_to 'Twitter', 'https://twitter.com/_dankaplan/', target: '_blank'
+          , and check out my 
+          = succeed '.' do
+            = link_to 'Blog', blog_url
 
-          %p
-            Outside of work, I am a huge Bulls fan, love going to comedy shows, hanging out with my friends, and trying new restaurants.
+        %p
+          Outside of work, I am a huge Bulls fan, love going to comedy shows, hanging out with my friends, and trying new restaurants.

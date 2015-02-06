@@ -1,0 +1,12 @@
+.posts
+  .row
+    .col-sm-4.col-sm-offset-4
+      %h1
+        Blog Posts
+  - @posts.each do |post|
+    .row
+      .col-sm-4.col-sm-offset-4
+        %p
+          = link_to post.title, post_url(post)
+          %span="(#{post.created_at.strftime("%b %d, %Y")})"
+
