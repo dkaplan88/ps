@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 
   get '/blog' => 'posts#index', as: :blog
 
-  resources :posts
+  scope '/blog' do
+    resources :posts
+    resources :tags, only: [:show]
+  end
 end
