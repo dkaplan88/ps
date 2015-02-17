@@ -12,12 +12,15 @@
 
         %p 
           Here is my
-          = link_to 'Github', 'https://github.com/dkaplan88', target: '_blank'
-          , Resume,
-          = link_to 'LinkedIn', 'https://www.linkedin.com/in/dkaplan88', target: '_blank'
-          ,
-          = link_to 'Twitter', 'https://twitter.com/_dankaplan/', target: '_blank'
-          , and check out my 
+          = succeed ',' do
+            = link_to 'Github', 'https://github.com/dkaplan88', target: '_blank'
+          = succeed ',' do
+            = link_to 'Resume', resume_url, target: '_blank'
+          = succeed ',' do
+            = link_to 'LinkedIn', 'https://www.linkedin.com/in/dkaplan88', target: '_blank'
+          = succeed ',' do
+            = link_to 'Twitter', 'https://twitter.com/_dankaplan/', target: '_blank'
+          and check out my
           = succeed '.' do
             = link_to 'Blog', blog_url
 
