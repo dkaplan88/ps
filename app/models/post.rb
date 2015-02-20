@@ -6,5 +6,5 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :title, :content
 
-  validates :title, uniqueness: true
+  validates :title, uniqueness: true, on: :create
 end
