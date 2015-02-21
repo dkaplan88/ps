@@ -14,6 +14,9 @@
     .content
       = label_tag(:content)
       .content-box= text_area_tag(:content, @post.content)
+    = f.fields_for :tags do |t|
+      = t.label :name, "Tags: #{@post.tags.map(&:name)}"
+      = t.text_field :name
 
 
   .actions

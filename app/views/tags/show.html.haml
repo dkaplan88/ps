@@ -1,0 +1,16 @@
+.tags
+  .row
+    .col-sm-4
+      = link_to 'See All Tags', tags_url
+  .row
+    .col-sm-4
+      %h2
+        = @tag.name
+  .row
+    .col-sm-12
+      %p
+        All Posts with this Tag:
+  - @tag.posts.each do |p|
+    .row
+      .col-sm-12
+        %p= link_to p.title, post_url(p)

@@ -17,6 +17,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+    set_tags
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -29,6 +31,8 @@ class PostsController < ApplicationController
   end
 
   def update
+    set_tags
+
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -54,6 +58,17 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.permit(:id, :title, :content, :slug)
+      params.permit(:id, :title, :content, :slug, tags: [])
+    end
+
+    def set_tags
+      tags = params["post"]["tags"]["name"]
+
+      if tags
+        tags.split(',').each do |tag|
+          t = Tag.where(name: tag).first_or_create
+          @post.tags << t
+        end
+      end
     end
 end

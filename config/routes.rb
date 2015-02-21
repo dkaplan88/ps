@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   scope '/blog' do
     resources :posts
-    resources :tags, only: [:show]
+    resources :tags, only: [:show, :index]
   end
 end

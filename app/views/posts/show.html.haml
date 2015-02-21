@@ -9,3 +9,11 @@
   .row
     .col-sm-12
       %p= @post.content.html_safe
+  - if @post.tags.present?
+    .row
+      .col-sm-12
+        %h4
+          Tags
+        %p
+          - @post.tags.each do |tag|
+            = link_to tag.name, tag_url(tag)
