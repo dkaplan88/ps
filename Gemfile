@@ -5,6 +5,7 @@ gem 'rails', '4.1.8'
 gem 'pg'
 gem 'haml'
 gem 'rake'
+gem 'devise'
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.3'
