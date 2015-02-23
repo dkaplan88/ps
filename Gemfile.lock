@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/plataformatec/devise
+  revision: 61ec44b76edb7f4f0df9683ebb515beb80196fe9
+  specs:
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -31,9 +43,7 @@ GEM
     autoprefixer-rails (5.1.3.1)
       execjs
       json
-    bcrypt (3.1.7)
-    bcrypt-ruby (3.1.5)
-      bcrypt (>= 3.1.3)
+    bcrypt (3.1.10)
     bootstrap-sass (3.3.3)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
@@ -45,12 +55,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.0)
-    devise (3.2.3)
-      bcrypt-ruby (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      thread_safe (~> 0.1)
-      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.3.0)
@@ -105,6 +109,8 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     rspec-collection_matchers (1.0.0)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (2.99.1)
@@ -160,7 +166,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.3.3)
   coffee-rails (~> 4.0.0)
-  devise
+  devise!
   factory_girl_rails
   friendly_id (~> 5.1.0)
   haml
