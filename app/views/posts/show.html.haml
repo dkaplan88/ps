@@ -7,7 +7,7 @@
       %h3
         = @post.title
   .row
-    .col-sm-12
+    .col-sm-12.blog-content
       %p= @post.content.html_safe
   - if @post.tags.present?
     .row
@@ -16,4 +16,7 @@
           Tags
         %p
           - @post.tags.each do |tag|
-            = link_to tag.name, tag_url(tag)
+            - if tag == @post.tags.last
+              = link_to tag.name, tag_url(tag)
+            - else
+              = "#{link_to tag.name, tag_url(tag)},".html_safe
