@@ -3,6 +3,10 @@ require 'spec_helper'
 describe PostsController do
   let(:valid_attributes) { { title: 'Test', content: 'example' } }
 
+  before :each do
+    sign_in
+  end
+
   describe "GET index" do
     it "assigns all posts as @posts" do
       post = Post.create! valid_attributes

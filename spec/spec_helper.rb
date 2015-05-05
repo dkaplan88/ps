@@ -21,6 +21,10 @@ RSpec.configure do |config|
   # Factory Girl
   config.include FactoryGirl::Syntax::Methods
 
+  # Devise & Authentication
+  config.include Devise::TestHelpers, :type => :controller
+  config.include ControllerHelpers, :type => :controller
+
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

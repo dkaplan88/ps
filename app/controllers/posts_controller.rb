@@ -63,12 +63,14 @@ class PostsController < ApplicationController
     end
 
     def set_tags
-      tags = params["post"]["tags"]["name"]
+      if params['post'] && params['post']['tags']
+        tags = params['post']['tags']['name']
 
-      if tags
-        tags.split(',').each do |tag|
-          t = Tag.where(name: tag).first_or_create
-          @post.tags << t
+        if tags
+          tags.split(',').each do |tag|
+            t = Tag.where(name: tag).first_or_create
+            @post.tags << t
+          end
         end
       end
     end
