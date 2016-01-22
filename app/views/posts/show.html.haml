@@ -6,6 +6,9 @@
     .col-sm-12
       %h3
         = @post.title
+      %p.mtn10.mb0
+        = @post.created_at.strftime("%b %d, %Y")
+        by Dan Kaplan
   .row
     .col-sm-12.blog-content
       %p= @post.content.html_safe
