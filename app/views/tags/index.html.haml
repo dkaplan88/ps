@@ -3,9 +3,8 @@
     .col-sm-4.col-sm-offset-4
       %h1
         All Tags
-  - @tags.each do |tag|
-    .row
-      .col-sm-4.col-sm-offset-4
-        %p
-          = link_to tag.name, tag_url(tag)
+  .row
+    .col-sm-4.col-sm-offset-4
+      %p
+        = @tags.map { |tag| link_to "#{tag.name}", tag_url(tag) if tag.active? }.join(', ').html_safe
 

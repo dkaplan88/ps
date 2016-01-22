@@ -23,6 +23,8 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'rack-canonical-host'
 
+gem 'pry'
+
 group :development, :test do
   gem 'spring'
   gem 'factory_girl_rails'

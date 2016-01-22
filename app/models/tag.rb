@@ -7,4 +7,8 @@ class Tag < ActiveRecord::Base
   validates_presence_of :name
 
   validates :name, uniqueness: true
+
+  def active?
+    self.posts.count > 0
+  end
 end
