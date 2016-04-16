@@ -1,5 +1,13 @@
 .row
-  .col-sm-6.col-sm-offset-4
-    %h1.nav-link
-      = link_to 'Dan Kaplan', root_url
-    .prof-image
+  .col-sm-12
+    .text-center
+      .nav-link
+        %h1
+          = link_to 'Dan Kaplan', root_url
+        %p
+          = link_to 'Blog', blog_url
+          = link_to 'Resume', resume_url, target: '_blank'
+          = link_to 'GitHub', 'https://github.com/dkaplan88', target: '_blank'
+          = link_to 'LinkedIn', 'https://www.linkedin.com/in/dkaplan88', target: '_blank'
+          = link_to 'Twitter', 'https://twitter.com/_dankaplan/', target: '_blank'
+      .prof-image
