@@ -11,10 +11,15 @@ h3 {
 }
 
 .prof-image {
+  background: image-url('me.png') no-repeat;
+  width: 750px;
+  height: 563px;
+}
+
+.circle-image {
   border-radius: 50%;
   width: 175px;
   height: 175px;
-  background: image-url('me.png') no-repeat;
   margin-left: auto;
   margin-right: auto;
 }
@@ -43,4 +48,39 @@ h3 {
 }
 
 .mb0 { margin-bottom: 0; }
+.mb5 { margin-bottom: 5px; }
 .mtn10 { margin-top: -10px; }
+
+.home {
+  .home-headline {
+    font-size: 60px;
+  }
+
+  .home-title {
+    margin-top: 60px;
+    margin-right: 60px;
+    font-size: 40px;
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-top: 10px;
+    }
+  }
+
+  .home-subtitle {
+    font-size: 30px;
+    margin-top: 30px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .home-profile-image {
+    background: image-url('home_profile_pic.png') no-repeat;
+    width: 340px;
+    height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

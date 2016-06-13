@@ -3,8 +3,11 @@ Rails.application.routes.draw do
 
   root to: 'static#home'
 
-  get '/blog' => 'posts#index', as: :blog
-  get '/resume' => 'static#resume', as: :resume
+  get '/about'      => 'static#about',      as: :about
+  get '/where_am_i' => 'static#where_am_i', as: :where_am_i
+  get '/resume'     => 'static#resume',     as: :resume
+  get '/blog'       => 'posts#index',       as: :blog
+  get '/countries'  => 'static#countries',  as: :countries
 
   scope '/blog' do
     resources :posts

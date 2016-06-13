@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Dan Kaplan
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+    = favicon_link_tag 'me.png'
+
+    %meta{content: 'Dan Kaplan is a fantastic Full Stack Developer specializing in Ruby On Rails', name: 'description'}
+    %title Dan Kaplan - Experienced Full Stack Developer specializing in Ruby On Rails
+
+  %body
+    .container
+      = yield
